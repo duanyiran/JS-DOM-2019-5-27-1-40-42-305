@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+	</head>
+	<body>
+		<div><input id="username" type="text"></input></div>
+		<div><input id="password" type="text"></input></div>
+		<div><button id="submit" onclick="verify()">登录</button></div>
+		
+		<script>
+			function verify(){
+				var username = document.getElementById('username').value;
+				var password = document.getElementById('password').value;
+				if('123' == username && '123' == password){
+					alert("登录成功");
+				}else if('123' == username && '123' != password){
+					alert("密码错误");
+					document.getElementById('password').value = '';
+				}else{
+					alert("用户不存在！");
+				}
+			}
+		</script>
+	</body>
+</html>
